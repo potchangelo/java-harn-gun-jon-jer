@@ -1,4 +1,6 @@
 package com.harngunjonjer;
+
+import com.harngunjonjer.utils.Calculator;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,14 +28,7 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int numerator = Integer.parseInt(inputTextField.getText());
-
-                String output = "Divisible denominators : ";
-                for (int i = 2; i < numerator; i++) {
-                    if (numerator % i == 0) {
-                        output += i + ", ";
-                    }
-                }
-
+                String output = Calculator.getDivisibleOutput(numerator);
                 outputLabel.setText(output);
             }
         });
