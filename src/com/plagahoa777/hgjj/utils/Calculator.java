@@ -1,4 +1,4 @@
-package com.harngunjonjer.utils;
+package com.plagahoa777.hgjj.utils;
 
 public class Calculator {
     public static String getDivisibleOutput(int numerator) {

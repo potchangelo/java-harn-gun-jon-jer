@@ -1,6 +1,6 @@
-package com.harngunjonjer;
+package com.plagahoa777.hgjj;
 
-import com.harngunjonjer.utils.Calculator;
+import com.plagahoa777.hgjj.utils.Calculator;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
