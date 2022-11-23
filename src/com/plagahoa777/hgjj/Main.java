@@ -3,8 +3,8 @@ package com.plagahoa777.hgjj;
 import com.plagahoa777.hgjj.utils.Calculator;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+//import java.awt.event.ActionEvent;
+//import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 
@@ -29,13 +29,22 @@ public class Main {
         // สร้างปุ่มและ Action
         JButton showButton = new JButton("หาเลขหารลงตัว");
         showButton.setBounds(20, 100, 580, 50);
-        showButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                int numerator = Integer.parseInt(inputTextField.getText());
-                String output = Calculator.getDivisibleOutput(numerator);
-                outputLabel.setText(output);
-            }
+
+        // Action ของปุ่มแบบ Classic
+//        showButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                int numerator = Integer.parseInt(inputTextField.getText());
+//                String output = Calculator.getDivisibleOutput(numerator);
+//                outputLabel.setText(output);
+//            }
+//        });
+
+        // Action ของปุ่มแบบสั้นกว่า (Lambda)
+        showButton.addActionListener(e -> {
+            int numerator = Integer.parseInt(inputTextField.getText());
+            String output = Calculator.getDivisibleOutput(numerator);
+            outputLabel.setText(output);
         });
 
         // Custom Font
@@ -45,9 +54,7 @@ public class Main {
             inputTextField.setFont(normalCustomFont);
             outputLabel.setFont(normalCustomFont);
             showButton.setFont(normalCustomFont);
-        } catch (FontFormatException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
+        } catch (FontFormatException | IOException e) {
             throw new RuntimeException(e);
         }
 
