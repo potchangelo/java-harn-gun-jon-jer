@@ -10,6 +10,9 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
+        // พิมพ์เล่นๆ กลัว Run console เหงา
+        System.out.println("By Plagahoa777");
+
         // สร้าง Frame หน้าต่าง
         JFrame frame = new JFrame("หารกันจนเจอ Harn Gun Jon Jer");
         frame.setSize(640, 480);
@@ -18,7 +21,6 @@ public class Main {
         // สร้างตัวรับ Input
         JTextField inputTextField = new JTextField();
         inputTextField.setBounds(20, 20, 580, 50);
-        frame.add(inputTextField);
 
         // สร้างตัวแสดง Output
         JLabel outputLabel = new JLabel();
