@@ -10,6 +10,6 @@ Note 2 : ในการเรียกใช้ Method addActionListener ขอ
 
 ## YouTube video
 
-https://www.youtube.com/watch?v=sL2EWJwuagw
+https://youtu.be/sL2EWJwuagw
 
 
